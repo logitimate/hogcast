@@ -4,6 +4,7 @@ export const config: ScullyConfig = {
   projectRoot: './src',
   projectName: 'client',
   outDir: './dist/static',
+  distFolder: './dist/apps/client',
   routes: {
     '/episode/:id': {
       type: 'json',
