@@ -1,7 +1,7 @@
 import { ScullyConfig } from '@scullyio/scully';
 export const config: ScullyConfig = {
   projectRoot: "./src",
-  projectName: "hogcast-scully",
+  projectName: "client",
   outDir: './dist/static',
   routes: {
     '/episode/:id': {
