@@ -1,10 +1,13 @@
 {
   "name": "client",
   "version": "0.0.0",
+  "engines" : {
+    "node" : "10.x"
+  },
   "scripts": {
     "ng": "nx",
-    "start": "ng serve",
-    "build": "ng build",
+    "start": "node dist/apps/api/main",
+    "build": "nx run-many --target=build --projects=client,api",
     "test": "ng test",
     "lint": "nx workspace-lint && ng lint",
     "e2e": "ng e2e",
