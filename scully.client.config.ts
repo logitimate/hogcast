@@ -1,4 +1,4 @@
-import { environment } from './src/environments/environment';
+import { environment } from './apps/client/src/environments/environment';
 import { ScullyConfig } from '@scullyio/scully';
 export const config: ScullyConfig = {
   projectRoot: './src',
@@ -8,7 +8,7 @@ export const config: ScullyConfig = {
     '/episode/:id': {
       type: 'json',
       id: {
-        url: `${environment.api}/episodes`,
+        url: `https://hogcast-services.herokuapp.com/api/episodes`,
         property: 'id'
       }
     }

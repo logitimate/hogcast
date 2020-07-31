@@ -72,3 +72,12 @@ The option outDir isn't configured, using default folder ".\dist\static\".No rou
 The option outDir isn't configured, using default folder ".\dist\static\".No routes defined in ""
 
 No configuration for route "/episode/:id" found. Skipping
+
+----------------------------------
+Using stored unhandled routes!.
+   To discover new routes in the angular app use "npm run scully -- --scanRoutes"
+----------------------------------****************************************************************************************
+This is a development tool for Scully applications.
+You can ignore the warning (TLS) or run scully with --no-warning
+****************************************************************************************
+
