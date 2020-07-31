@@ -8,13 +8,13 @@ export class Episode {
   @Column({ length: 500 })
   name: string;
 
-  @Column({ type: 'varchar', length: 10000 })
+  @Column({ type: 'text', length: 10000 })
   description: string;
 
   @Column({ nullable: true })
   link: string;
 
-  @Column({ type: 'varchar', nullable: true, length: 10000 })
+  @Column({ type: 'text', nullable: true, length: 10000 })
   summary: string;
 
   @Column({ nullable: true })
