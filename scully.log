@@ -42,3 +42,33 @@ You can ignore the warning (TLS) or run scully with --no-warning
 
 
 
+The option outDir isn't configured, using default folder ".\dist\static\".No routes defined in ""
+
+The option outDir isn't configured, using default folder ".\dist\static\".No routes defined in ""
+
+No configuration for route "/episode/:id" found. Skipping
+The option outDir isn't configured, using default folder ".\dist\static\".No routes defined in ""
+
+The option outDir isn't configured, using default folder ".\dist\static\".No routes defined in ""
+
+
+----------------------------------
+Using stored unhandled routes!.
+   To discover new routes in the angular app use "npm run scully -- --scanRoutes"
+----------------------------------No configuration for route "/episode/:id" found. Skipping
+
+The option outDir isn't configured, using default folder ".\dist\static\".No routes defined in ""
+
+The option outDir isn't configured, using default folder ".\dist\static\".No routes defined in ""
+
+
+----------------------------------
+Using stored unhandled routes!.
+   To discover new routes in the angular app use "npm run scully -- --scanRoutes"
+----------------------------------No configuration for route "/episode/:id" found. Skipping
+
+The option outDir isn't configured, using default folder ".\dist\static\".No routes defined in ""
+
+The option outDir isn't configured, using default folder ".\dist\static\".No routes defined in ""
+
+No configuration for route "/episode/:id" found. Skipping
