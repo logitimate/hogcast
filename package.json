@@ -1,8 +1,8 @@
 {
   "name": "client",
   "version": "0.0.0",
-  "engines" : {
-    "node" : "10.x"
+  "engines": {
+    "node": "10.x"
   },
   "scripts": {
     "ng": "nx",
@@ -13,7 +13,7 @@
     "e2e": "ng e2e",
     "scully": "scully",
     "scully:serve": "scully serve",
-    "scully:build": "nx build client && ls -ltra dist/* && npm run scully && ls -ltra dist/*",
+    "scully:build": "nx build client && npm run scully",
     "nx": "nx",
     "affected:apps": "nx affected:apps",
     "affected:libs": "nx affected:libs",
