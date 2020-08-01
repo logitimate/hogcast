@@ -13,7 +13,7 @@
     "e2e": "ng e2e",
     "scully": "scully",
     "scully:serve": "scully serve",
-    "scully:build": "nx build client && ls -ltra dist/* && scully && ls -ltra dist/*",
+    "scully:build": "nx build client && ls -ltra dist/* && npm run scully && ls -ltra dist/*",
     "nx": "nx",
     "affected:apps": "nx affected:apps",
     "affected:libs": "nx affected:libs",
