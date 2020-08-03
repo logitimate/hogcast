@@ -1,0 +1,4 @@
+[[plugins]]
+package = "./plugins/netlify-plugin-scully-build.js"
+  [plugins.inputs]
+  fullBuild = false

@@ -1,0 +1,4 @@
+name: netlify-plugin-scully-build
+inputs:
+  - name: fullBuild
+    description: stuff
