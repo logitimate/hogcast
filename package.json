@@ -7,7 +7,7 @@
   "scripts": {
     "ng": "nx",
     "start": "node dist/apps/api/main",
-    "build": "nx run-many --target=build --projects=client,api",
+    "build": "nx run-many --target=build --projects=api",
     "test": "ng test",
     "lint": "nx workspace-lint && ng lint",
     "e2e": "ng e2e",
