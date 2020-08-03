@@ -1,16 +1,16 @@
 import { InjectRepository } from '@nestjs/typeorm';
-import { Injectable, Logger, Req, Res } from '@nestjs/common';
+import { Injectable, Req, Res } from '@nestjs/common';
 import { Episode } from './episode.entity';
 import { Repository } from 'typeorm';
 
 @Injectable()
 export class EpisodesService {
-  constructor(@InjectRepository(Episode)
-  private readonly episodeRepo: Repository<Episode>) {
+  constructor(
+    @InjectRepository(Episode) private readonly episodeRepo: Repository<Episode>
+  ) {
   }
 
   async findAll(): Promise<Episode[]> {
-    console.log('######')
     return await this.episodeRepo.find({ order: { publishDate: 'ASC' } });
   }
 
@@ -25,29 +25,32 @@ export class EpisodesService {
     return await this.episodeRepo.findOne(id);
   }
 
-  async updateEpisode(id: number, cat: Episode): Promise<any> {
+  async updateEpisode(id: number, episode: Episode): Promise<any> {
     try {
       const currentEpisode: Episode = await this.episodeRepo.findOne(id);
-      Object.assign(currentEpisode, cat);
-      return await this.episodeRepo.save(currentEpisode);
+      return await this.episodeRepo.save({
+        ...currentEpisode,
+        description: episode.description,
+        imageLink: episode.description,
+        keywords: episode.keywords,
+        name: episode.name,
+        summary: episode.summary,
+        link: episode.link
+      });
     } catch (err) {
       return err;
     }
-
   }
 
-  async create(@Req() req, @Res() res): Promise<any> {
+  async create(episode: Episode): Promise<any> {
     // TODO: CJ help.
     // await this.upload(req, res, error => {
     //   if (error) {
     //     return res.status(404).json(`Failed to upload image file: ${error}`);
     //   }
 
-    const newEpisode: Episode = { ...req.body } as Episode;
     try {
-      this.episodeRepo.save(newEpisode).then((episode) => {
-        return res.status(201).json(episode);
-      });
+      return this.episodeRepo.save(episode);
     } catch (err) {
       return res.status(500).json(`Failed to upload image file: ${err}`);
     }
@@ -57,7 +60,6 @@ export class EpisodesService {
 
   async createMultiple(@Req() req, @Res() res): Promise<any> {
     const newEpisodes: Episode[] = req.body;
-    console.log(newEpisodes)
     newEpisodes.forEach(episode => {
       try {
         this.episodeRepo.save(episode).then((newEpisode) => {
