@@ -45,7 +45,7 @@ export class EpisodesController {
   @Post()
   async create(@Req() request, @Res() response) {
     try {
-      return this.episodeService.create(request, response);
+      return this.episodeService.create(request);
     } catch (err) {
       response.status(HttpStatus.BAD_REQUEST).json(err);
     }

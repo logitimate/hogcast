@@ -56,7 +56,7 @@ export class EpisodesService {
     try {
       return this.episodeRepo.save(episode);
     } catch (err) {
-      return res.status(500).json(`Failed to upload image file: ${err}`);
+      return err;
     }
     // return res.status(201).json(newEpisode);
     // });
