@@ -28,4 +28,7 @@ export class Episode {
 
   @Column({ nullable: true })
   imageLink: string;
+
+  @Column()
+  changed:boolean = true;
 }

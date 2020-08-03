@@ -1,10 +1,21 @@
-import { Body, Controller, Delete, Get, HttpStatus, Param, Post, Put, Req, Res } from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  Delete,
+  Get,
+  HttpStatus,
+  Param,
+  Post,
+  Put,
+  Req,
+  Res,
+  Query,
+} from '@nestjs/common';
 import { EpisodesService } from './episodes.service';
 
 @Controller('episodes')
 export class EpisodesController {
-  constructor(private readonly episodeService: EpisodesService) {
-  }
+  constructor(private readonly episodeService: EpisodesService) {}
 
   @Get()
   findAll() {
@@ -14,6 +25,11 @@ export class EpisodesController {
   @Get('changed')
   changed() {
     return this.episodeService.changed();
+  }
+
+  @Get('reset-changes')
+  resetChanges(@Query('fullRebuild') fullRebuild: boolean) {
+    return this.episodeService.resetChanges(fullRebuild);
   }
 
   @Get(':id')

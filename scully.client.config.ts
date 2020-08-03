@@ -9,8 +9,7 @@ export const config: ScullyConfig = {
     '/episode/:id': {
       type: 'json',
       id: {
-        url: `https://hogcast-services.herokuapp.com/api/episodes`,
-        property: 'id'
+        url: `https://hogcast-services.herokuapp.com/api/episodes/changed`,
       }
     }
   }
