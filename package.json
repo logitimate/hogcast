@@ -2,7 +2,7 @@
   "name": "client",
   "version": "0.0.0",
   "engines": {
-    "node": "12.x"
+    "node": "10.x"
   },
   "scripts": {
     "ng": "nx",
@@ -65,14 +65,20 @@
     "@angular/cli": "10.0.4",
     "@angular/compiler-cli": "10.0.0",
     "@angular/language-service": "10.0.0",
+    "@nestjs/schematics": "^7.0.0",
+    "@nestjs/testing": "^7.0.0",
+    "@nrwl/jest": "10.0.7",
     "@nrwl/nest": "10.0.7",
+    "@nrwl/node": "10.0.7",
     "@nrwl/workspace": "10.0.7",
     "@types/jasmine": "~3.3.8",
     "@types/jasminewd2": "~2.0.3",
+    "@types/jest": "25.1.4",
     "@types/node": "^12.11.1",
     "codelyzer": "^5.1.2",
     "jasmine-core": "~3.4.0",
     "jasmine-spec-reporter": "~4.2.1",
+    "jest": "25.2.3",
     "karma": "~4.1.0",
     "karma-chrome-launcher": "~2.2.0",
     "karma-coverage-istanbul-reporter": "~2.0.1",
@@ -80,15 +86,10 @@
     "karma-jasmine-html-reporter": "^1.4.0",
     "prettier": "2.0.4",
     "protractor": "~5.4.0",
+    "rimraf": "^3.0.2",
+    "ts-jest": "25.2.1",
     "ts-node": "~7.0.0",
     "tslint": "6.0.0",
-    "typescript": "3.9.7",
-    "@nrwl/jest": "10.0.7",
-    "jest": "25.2.3",
-    "@types/jest": "25.1.4",
-    "ts-jest": "25.2.1",
-    "@nrwl/node": "10.0.7",
-    "@nestjs/schematics": "^7.0.0",
-    "@nestjs/testing": "^7.0.0"
+    "typescript": "3.9.7"
   }
 }
