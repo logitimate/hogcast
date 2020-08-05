@@ -5,12 +5,13 @@ export const config: ScullyConfig = {
   projectName: 'client',
   outDir: './public',
   distFolder: './dist/apps/client',
+  handle404: 'index',
   routes: {
     '/episode/:id': {
       type: 'json',
       id: {
-        url: `https://hogcast-services.herokuapp.com/api/episodes/changed`,
-      }
+        url: `https://hogcast-services.herokuapp.com/api/episodes/changed`
+      },
     }
   }
 };

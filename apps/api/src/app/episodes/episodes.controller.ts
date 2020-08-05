@@ -10,6 +10,7 @@ import {
   Req,
   Res,
   Query,
+  NotFoundException,
 } from '@nestjs/common';
 import { EpisodesService } from './episodes.service';
 
@@ -33,8 +34,11 @@ export class EpisodesController {
   }
 
   @Get(':id')
-  getEpisode(@Param('id') id) {
-    return this.episodeService.getEpisode(id);
+  async getEpisode(@Param('id') id) {
+    const episode = await this.episodeService.getEpisode(id);
+    if(!episode)
+      throw new NotFoundException();
+    return episode;
   }
 
   @Put(':id')
