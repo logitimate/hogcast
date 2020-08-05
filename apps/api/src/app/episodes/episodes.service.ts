@@ -14,9 +14,9 @@ export class EpisodesService {
   }
 
   async changed(): Promise<number[]> {
-    return (await this.episodeRepo.find({ changed: true })).map(
+    return [444, ...(await this.episodeRepo.find({ changed: true })).map(
       (episode) => episode.id
-    );
+    )];
   }
 
   async getEpisode(id: number): Promise<Episode> {

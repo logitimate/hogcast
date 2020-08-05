@@ -3,7 +3,7 @@ import { ScullyConfig } from '@scullyio/scully';
 export const config: ScullyConfig = {
   projectRoot: './src',
   projectName: 'client',
-  outDir: './dist/static',
+  outDir: './public',
   distFolder: './dist/apps/client',
   routes: {
     '/episode/:id': {
